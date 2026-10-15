@@ -1,16 +1,25 @@
-# React + Vite
+# A.2 Instruções para execução do frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Passo 1 - Clonar o repositório
 
-Currently, two official plugins are available:
+git clone git@github.com:0110k011/frontend-gestao-estoque-tcc.git
+ou
+git clone https://github.com/0110k011/frontend-gestao-estoque-tcc.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Passo 2 - Instalar as dependências
 
-## React Compiler
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Passo 3 - Configurar a URL da API
 
-## Expanding the ESLint configuration
+Crie um arquivo .env.local na raiz do projeto com o seguinte conteúdo:
+VITE_API_URL=http://localhost:8080
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Esse arquivo não é versionado (está no .gitignore) e permite que o mesmo código-fonte seja utilizado em diferentes ambientes sem alterações.
+
+## Passo 4 - Iniciar o servidor de desenvolvimento
+
+npm run dev
+
+O frontend estará disponível em http://localhost:5173. O backend deve estar em execução simultânea para que a comunicação funcione.
+
